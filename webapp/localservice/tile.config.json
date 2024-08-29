@@ -1,0 +1,52 @@
+{
+    "TileCollection":[
+        {
+            "Title":"View List",
+            "Description":"Visualizacion de coleccion de items",
+            "Icon":"sap-icon://list",
+            "view":"ViewList"
+        },
+        {
+            "Title":"View List2",
+            "Description":"Visualizacion de coleccion de items",
+            "Icon":"sap-icon://list",
+            "view":"ViewForm"
+        },
+        {
+            "Title":"View List3",
+            "Description":"Visualizacion de coleccion de items",
+            "Icon":"sap-icon://list",
+            "view":"ViewList"
+        },
+        {
+            "Title":"View List4",
+            "Description":"Visualizacion de coleccion de items",
+            "Icon":"sap-icon://list",
+            "view":"ViewList"
+        },
+        {
+            "Title":"View List5",
+            "Description":"Visualizacion de coleccion de items",
+            "Icon":"sap-icon://list",
+            "view":"ViewList"
+        },
+        {
+            "Title":"View List6",
+            "Description":"Visualizacion de coleccion de items",
+            "Icon":"sap-icon://list",
+            "view":"ViewList"
+        },
+        {
+            "Title":"View List7",
+            "Description":"Visualizacion de coleccion de items",
+            "Icon":"sap-icon://list",
+            "view":"ViewList"
+        },
+        {
+            "Title":"View List8",
+            "Description":"Visualizacion de coleccion de items",
+            "Icon":"sap-icon://list",
+            "view":"ViewList"
+        }
+    ]
+}
