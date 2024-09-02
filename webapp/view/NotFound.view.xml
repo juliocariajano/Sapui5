@@ -1,0 +1,15 @@
+<mvc:View controllerName="appviewcatalog.controller.NotFound"
+   xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+    displayBlock="true"
+    height="100%"
+    >
+
+  <MessagePage icon="sap-icon://documents"
+		title="NotFound"
+		text="Error 404"
+		description="Ruta no encontrada"
+        showHeader="false"
+		showNavButton="true"
+		/>
+</mvc:View>

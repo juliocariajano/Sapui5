@@ -1,0 +1,7 @@
+<mvc:View controllerName="appviewcatalog.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page title="Detalle">
+            <Text text="Soy Detalle"></Text>
+    </Page>
+</mvc:View>

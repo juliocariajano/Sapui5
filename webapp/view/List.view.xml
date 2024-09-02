@@ -1,8 +1,11 @@
 <mvc:View controllerName="appviewcatalog.controller.List"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    >
+
     <Page title="Vista List">
-        <content>
+<content>
             <VBox class="sapUiContentPadding sapUiSmallMargin">
             <OverflowToolbar >
             <SearchField liveChange=".onSearch" width="100%" />
@@ -27,6 +30,7 @@
 
                 </List>
             </VBox>
-        </content>
+</content>          
+
     </Page>
 </mvc:View>
