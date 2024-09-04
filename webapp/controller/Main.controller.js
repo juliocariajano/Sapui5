@@ -1,8 +1,7 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/core/UIComponent"
+    "./Base.controller",
 ],
-function (Controller,UIComponent) {
+function (Controller,) {
     "use strict";
 
     return Controller.extend("appviewcatalog.controller.Main", {
@@ -12,8 +11,7 @@ function (Controller,UIComponent) {
         onPressTile: function(oEvent){
             let viewRoute = oEvent.getSource().getBindingContext("mTile").getObject().view;
 
-            let oRouter = UIComponent.getRouterFor(this);
-            oRouter.navTo(viewRoute)
+          this.onNavTo(viewRoute);
         }
     });
 });

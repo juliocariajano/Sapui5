@@ -1,14 +1,12 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/core/UIComponent"
+    "./Base.controller",
 ],
-    function (Controller,UIComponent) {
+    function (Controller) {
         "use strict";
 
         return Controller.extend("appviewcatalog.controller.Detail", {
             onInit: function () {
-                let oRouter = UIComponent.getRouterFor(this);
-                oRouter.getRoute("ViewDetail").attachMatched(this._onRouteMatched,this);    
+                this.getRouter().getRoute("ViewDetail").attachMatched(this._onRouteMatched,this);    
             },
             _onRouteMatched: function(oEvent){
                 let oArgs, oView;
@@ -24,7 +22,7 @@ sap.ui.define([
             },
 
             _onBindingChange: function(oEvent){
-                let oRouter = UIComponent.getRouterFor(this);
+                let oRouter = this.getRouter();
                 if(!oEvent.getSource().getBoundContext().getObject()){
                     oRouter.getTargets().display("TargetNotFound")
                 }

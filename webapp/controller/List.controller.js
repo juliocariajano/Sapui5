@@ -1,11 +1,9 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel",
+    "./Base.controller",
     "sap/ui/model/Filter",
     "sap/ui/model/FilterOperator",
-    "sap/ui/core/UIComponent"
 ],
-    function (Controller,JSONModel,Filter,FilterOperator,UIComponent) {
+    function (Controller,Filter,FilterOperator) {
         "use strict";
 
         return Controller.extend("appviewcatalog.controller.List", {
@@ -15,8 +13,8 @@ sap.ui.define([
             onPressProduct: function(oEvent){
                 let oItem= oEvent.getSource().getSelectedItem().getBindingContext("mProduct").getObject();
                 let idxProduct = this.getView().getModel("mProduct").getData().ProductCollection.indexOf(oItem)
-                let oRouter = UIComponent.getRouterFor(this);
-                oRouter.navTo("ViewDetail",{
+             
+                this.onNavTo("ViewDetail",{
                     productId: idxProduct
                 })              
             },
