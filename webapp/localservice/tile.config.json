@@ -7,8 +7,8 @@
             "view":"ViewList"
         },
         {
-            "Title":"View List2",
-            "Description":"Visualizacion de coleccion de items",
+            "Title":"Formulario",
+            "Description":"Formulario para registro de items",
             "Icon":"sap-icon://list",
             "view":"ViewForm"
         },

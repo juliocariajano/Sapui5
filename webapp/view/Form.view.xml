@@ -32,16 +32,15 @@
             <f:formElements>
             <f:FormElement label="Product ID" >
             <f:fields>
-            <Input id="txtProductId" value=""/>
+            <Input id="txtProductId" value="" change="changeValueState"/>
             </f:fields>
             </f:FormElement>
-           
              <f:FormElement label="Main Category - Category">
             <f:fields>
-            <ComboBox id="cboMainCategory" items="{path: 'mProduct>/MainCategories' , sorter: {path: 'text'}}">
+            <ComboBox id="cboMainCategory" items="{path: 'mProduct>/MainCategories' , sorter: {path: 'text'}}" change="changeValueState">
                 <core:Item key="{mProduct>key}" text="{mProduct>text}"/>
             </ComboBox>
-               <ComboBox id="cboCategory" items="{path: 'mProduct>/Categories' , sorter: {path: 'text'}}">
+               <ComboBox id="cboCategory" items="{path: 'mProduct>/Categories' , sorter: {path: 'text'}}" change="changeValueState">
                 <core:Item key="{mProduct>key}" text="{mProduct>text}"/>
             </ComboBox>
             </f:fields>
@@ -49,19 +48,19 @@
 
      <f:FormElement label="Name" >
             <f:fields>
-            <Input id="txtName" value=""/>
+            <Input id="txtName" value="" change="changeValueState"/>
             </f:fields>
             </f:FormElement>
 
  <f:FormElement label="Description" >
             <f:fields>
-            <Input id="txtDescription" value=""/>
+            <Input id="txtDescription" value="" change="changeValueState"/>
             </f:fields>
             </f:FormElement>
 
 <f:FormElement label="Supplier Name" >
             <f:fields>
-            <Input id="txtSupplierName" value=""/>
+            <Input id="txtSupplier" value="" change="changeValueState"/>
             </f:fields>
             </f:FormElement>
 
@@ -70,7 +69,7 @@
             </f:formContainers>
             </f:Form>
 
-            <f:Form id="frmWeiht" editable="true" class="sapUiSmallMarginTop">
+            <f:Form id="frmWeight" editable="true" class="sapUiSmallMarginTop">
              <f:title>
             <core:Title text="Weight"/>
             </f:title>
@@ -96,7 +95,7 @@
             <f:formElements>
                 <f:FormElement label="Weight Measure" >
                 <f:fields>
-                <Input id="txtWeightMeasure" />
+                <Input id="txtWeightMeasure" type="Number" change="changeValueState"/>
                 </f:fields>
                 </f:FormElement>
 
@@ -140,20 +139,23 @@
             <f:formElements>
                 <f:FormElement label="Date of Sale" >
                 <f:fields>
-                    <DatePicker id="dtSale" placeholder="Enter Date" class="sapUiSmallMarginBottom"/>
+                    <DatePicker id="dtSale" placeholder="Enter Date" class="sapUiSmallMarginBottom" change="changeValueState"/>
                 </f:fields>
                 </f:FormElement>
 
                 <f:FormElement label="Available Status" >
                 <f:fields>
-                    <Switch id="swStatus" status="true" customTextOn="YES" customTextOff="NO"/>
+                    <Switch id="swStatus" state="true" customTextOn="YES" customTextOff="NO">
+                    <layoutData>
+                    <FlexItemData growFactor="1"/>
+                    </layoutData>
+                </Switch>
                 </f:fields>
                 </f:FormElement>
 
-
                 <f:FormElement label="Quantity" >
                 <f:fields>
-                   <Input id="txtQuantity" value=""/>
+                   <Input id="txtQuantity" type="Number" change="changeValueState"/>
                 </f:fields>
                 </f:FormElement>
 
@@ -168,7 +170,7 @@
 
                   <f:FormElement label="Price" >
                 <f:fields>
-                   <Input id="txtPrice" value=""/>
+                   <Input id="txtPrice" value="" type="Number" change="changeValueState"/>
                 </f:fields>
                 </f:FormElement>
               
@@ -183,7 +185,7 @@
 
         <footer>
         <Toolbar >
-        <Button text="Submit" type="Accept" press="getValues" />
+        <Button text="Submit" type="Accept" press="onSubmit" />
         <Button text="Cancel" type="Reject" press="onReject"/>
         </Toolbar>
         </footer>
