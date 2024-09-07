@@ -140,6 +140,13 @@
           "target": [
             "TargetDetail"
           ]
+        },
+        {
+          "name": "ViewGastoSemanal",
+          "pattern": "ViewGastoSemanal",
+          "target": [
+            "TargetGastoSemanal"
+          ]
         }
       ],
       "targets": {
@@ -163,6 +170,13 @@
           "clearControlAggregation": false,
           "viewId": "Form",
           "viewName": "Form"
+        },
+        "TargetGastoSemanal": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "GastoSemanal",
+          "viewName": "GastoSemanal"
         },
         "TargetDetail": {
           "viewType": "XML",

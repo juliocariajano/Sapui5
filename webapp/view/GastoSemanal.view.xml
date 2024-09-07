@@ -1,0 +1,70 @@
+<mvc:View controllerName="appviewcatalog.controller.GastoSemanal"
+xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:tnt="sap.tnt"
+	xmlns:card="sap.f.cards"
+	xmlns:l="sap.ui.layout"
+	
+	xmlns:core="sap.ui.core"
+	displayBlock="true"
+	height="100%">
+        <Page  title="Control de Gastos" showNavButton="true" navButtonPress="onNavBack">
+
+   	<f:Card class="sapUiMediumMargin" width="300px">
+		<f:header>
+			<card:Header
+				title="Agrega tus gastos aquí"
+				subtitle="Ingresa tus gastos en el campo correspondiente"
+				iconSrc="sap-icon://bus-public-transport" />
+		</f:header>
+		<f:content>
+			<VBox
+				height="110px"
+				class="sapUiSmallMargin"
+				justifyContent="SpaceBetween">
+           <HBox justifyContent="SpaceBetween">
+		<Input
+			id="txtNombreGasto"
+			width="140px"
+			maxLength="30"
+			placeholder="Nombre del gasto">
+		</Input>
+		<Input
+			id="txtMontoGasto"
+			width="140px"
+			type="Number"
+			maxLength="0"
+			placeholder="Ingrese Monto EUR">
+		</Input>	
+				</HBox>
+				<HBox renderType="Bare" justifyContent="SpaceBetween">
+					<DatePicker width="200px" placeholder="Choose Date ..." />
+					<Button
+						text="Agregar"
+						press=".onBookPress"
+						type="Emphasized"
+						class="sapUiTinyMarginBegin" />
+				</HBox>
+			</VBox>
+		</f:content>
+	</f:Card>
+
+	<f:Card class="sapUiMediumMargin" width="300px">
+		<f:header>
+			<card:Header title="Listado" subtitle="Revenue per Product | EUR" />
+		</f:header>
+		<f:content>
+	<ScrollContainer vertical="true" height="100%">
+
+		<FlexBox direction="Column" alignItems="Start" class="sapUiMediumMargin">
+		<tnt:InfoLabel id="lblPresupuesto" text="Presupuesto:EUR" colorScheme="6" width = "180px"/>
+		</FlexBox>
+		<FlexBox direction="Column" alignItems="Start" class="sapUiMediumMargin sapUiSmallMarginTop">
+		<tnt:InfoLabel id="lblRestante" text="Restante:EUR" colorScheme="9" width = "180px" />
+		</FlexBox>
+	</ScrollContainer>
+	</f:content>
+	</f:Card>
+    </Page>
+       </mvc:View>

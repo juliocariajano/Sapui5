@@ -13,10 +13,10 @@
             "view":"ViewForm"
         },
         {
-            "Title":"View List3",
-            "Description":"Visualizacion de coleccion de items",
+            "Title":"Gastos Semanal",
+            "Description":"Proyecto de gasto Semanal",
             "Icon":"sap-icon://list",
-            "view":"ViewList"
+            "view":"ViewGastoSemanal"
         },
         {
             "Title":"View List4",
