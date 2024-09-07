@@ -23,6 +23,7 @@ sap.ui.define([
             sPreviousHash = oHistory.getPreviousHash();
             if(sPreviousHash !== undefined){
                 window.history.go(-1);
+                
             }else{
                 this.getRouter().navTo("RouteMain")
             }
